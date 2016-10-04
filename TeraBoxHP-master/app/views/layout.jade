@@ -1,0 +1,169 @@
+doctype html
+<!--[if IE 8]><html lang="ja" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="ja" class="ie9"><![endif]-->
+<!--[if !IE]><!--><html lang="ja"><!--<![endif]-->
+head
+
+  title テラボックス株式会社(TeraBox)
+
+  // Meta 
+  meta(charset='utf-8')
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  meta(name='description', content='')
+  meta(name='author', content='JoeHetfield')
+
+  // Favicon 
+  link(rel='shortcut icon', href='/favicon.ico')
+
+  // CSS
+  block css
+
+body.header-fixed
+
+  // Loader
+  #loading
+    .loading-inner
+      img(src='/img/loader/flat/3.gif', alt='loading...')
+
+  // Wrapper
+  .wrapper
+
+    // Header
+    .header.header-sticky
+
+      // Topbar 
+      .topbar
+        .container
+          // Topbar Navigation 
+          ul.loginbar.pull-right
+            //- li.languagesSelector
+            //-   i.fa.fa-globe
+            //-   | 
+            //-   a #{__('topBar.language')}
+            //-   ul.languages
+            //-     li(class=(locale === "ja")?"active":"")
+            //-       a(href='/ja/#{path}', hreflang="ja") #{__('topBar.languageOpt.ja')}
+            //-     li(class=(locale === "zh")?"active":"")
+            //-       a(href='/zh/#{path}', hreflang="zh") #{__('topBar.languageOpt.zh')}
+            //-     li(class=(locale === "en")?"active":"")
+            //-       a(href='/en/#{path}', hreflang="en") #{__('topBar.languageOpt.en')}
+            //- li.topbar-devider
+            //- li
+            //-   a(href='/login') #{__('topBar.login')}
+
+      // Navbar 
+      .navbar.navbar-default.mega-menu(role='navigation')
+        .container
+          // Brand
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+              span.sr-only Toggle navigation
+              span.fa.fa-bars
+            a.navbar-brand(href='/home')
+              //- img#logo-header(src='/img/eb/logo.gif', alt='Logo', style="height: 39px; width: auto; margin-bottom: 5px;")
+              h3 TeraBox Inc.
+          // Collect the nav links
+          .collapse.navbar-collapse.navbar-responsive-collapse
+            ul.nav.navbar-nav
+              li(class=(path === "home")?"active":"")
+                a(href='/home')
+                  | トップ
+              li(class=(path === "about-us")?"active":"")
+                a(href='/about-us')
+                  | 会社概要
+              li(class=(path === "services")?"active":"")
+                a(href='/services')
+                  | 事業内容
+              li(class=(path === "recruitment")?"active":"")
+                a(href='/recruitment')
+                  | 採用情報
+              li(class=(path === "contact")?"active":"")
+                a(href='/contact')
+                  | お問合せ
+
+    // Slider
+    block slider
+
+    // Breadcrumbs
+    block breadcrumbs
+
+    // Content
+    block content
+
+    // Footer
+    .footer-v1
+      .footer
+        .container
+          .row
+            // About 
+            .col-sm-6.col-md-3.md-margin-bottom-40
+              a(href='/home')
+                //- img#logo-footer.footer-logo(src='/img/logo2-default.png', alt='')
+                h2 テラボックス株式会社
+              p
+                | 社会と人々の生活をより豊かなものへと推進し、進化をもたらせるIT組織を目指していきます
+              img#logo-footer.footer-logo(src='/img/eb/E-businessQR.jpg', alt='', style="width: auto; height: 75px;")
+            // Latest 
+            .col-sm-6.col-md-3.md-margin-bottom-40
+              .posts
+                .headline
+                  h2 最新ニュース
+                ul.list-unstyled.latest-list
+                  li
+                    span(style="color: #eee;") 資本金600万円で設立
+                    small 2016年4月1日
+            // Link List 
+            .col-sm-6.col-md-3.md-margin-bottom-40
+              .headline
+                h2 リンク集
+              ul.list-unstyled.link-list
+                li
+                  a(href='/home') トップ
+                  i.fa.fa-angle-right
+                li
+                  a(href='/about-us') 会社概要
+                  i.fa.fa-angle-right
+                li
+                  a(href='/services') 事業内容
+                  i.fa.fa-angle-right
+                li
+                  a(href='/recruitment') 採用情報
+                  i.fa.fa-angle-right
+                li
+                  a(href='/contact') お問合せ
+                  i.fa.fa-angle-right
+            // Contact
+            .col-sm-6.col-md-3.map-img.md-margin-bottom-40
+              .headline
+                h2 お問合せ
+              address.md-margin-bottom-40
+                | 神奈川県川崎市川崎区堀之内町５丁目７番　アルコード川崎デューアル６０５号室
+                br
+                | 〒 210-0003
+                br
+                | Email: 
+                a(href='mailto:info@terabox.jp') info@terabox.jp
+
+      .copyright
+        .container
+          .row
+            .col-md-6
+              p Copyright © 2016 TeraBox Inc. All Rights Reserved.
+            .col-md-6
+              p.pull-right
+                a(href='/privacy') 個人情報保護方針
+                |  |
+                a(href='/terms-of-service')  個人情報の利用目的の公表に関する事項
+                |  |
+                a(href='/margin-rate')  労働者派遣のマージン率等
+
+  // JS
+  block js
+
+  <!--[if lt IE 9]>
+  <script src="/plugins/respond.js"></script>
+  <script src="/plugins/html5shiv.js"></script>    
+  <![endif]-->
+
+</html>
